@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MStats</title>
+
+  <script
+    src="MStats.js">
+  </script>
+  <style>
+
+    .formula span{
+      display: inline-block;
+    }
+    .formula span sup, .formula span sub {
+      display: block;
+      font-size: 65%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline;
+  }
+  .formula span sup {
+      top: -0.6em;
+  }
+  .formula span sub {
+      top: 0.4em;
+  }
+
+  </style>
+
+</head>
+<body>
+  <br>
+  <br>
+  <br>
+  <hr>
+  <h2>Please open console to use function</h2>
+  <hr>
+  <br>
+  <pre>
+    Available functions:                       Math equivalent
+
+    MStats.factorial(x)                        x!
+    MStats.c(m, n)                                  n!
+                                               <span class="formula">C<span><sup>m</sup><sub>n</sub></span></span> = -----------
+                                                    m!(n - m)!
+    MStats.a(m, n)                                  n!
+                                               <span class="formula">A<span><sup>m</sup><sub>n</sub></span></span> = -----------
+                                                    (n - m)!
+    MStats.p(n)                                P<sub>n</sub> = n!
+    MStats.pCC(k, K, n, N)                         <span class="formula">C<span><sup>k</sup><sub>K</sub></span></span> * <span class="formula">C<span><sup>n-k</sup><sub>N-K</sub></span></span>
+                                               P = --------
+                                                   <span class="formula">C<span><sup>n</sup><sub>N</sub></span></span>
+    MStats.baesa(array P(A|H<sub>k</sub>), array P(H<sub>k</sub>), i)          P(H<sub>k</sub>) * P(A|H<sub>k</sub>)
+    i - element index                          P(H<sub>k</sub>|A) = ----------------
+    don't input i - output all array                     <sub>k</sub>
+                                                         &sum; P(H<sub>i</sub>) * (A|H<sub>i</sub>)
+                                                         <sup>i=1</sup>
+    MStats.bernuli(p, n, k)                    <span class="formula">P<span><sup>k</sup><sub>n</sub></span></span> = <span class="formula">C<span><sup>k</sup><sub>n</sub></span></span>p<sup>k</sup>q<sup>n-k</sup>, where q = 1 - p
+    MStats.x(p, n, k)                               k - np
+                                               x = ------------
+                                                    &radic;(np(1 - p))
+    MStats.fi(x)                                      1
+                                               &#966;(x) = -----e<sup>-(x<sup>2</sup>/2)</sup>
+                                                      &radic;(2&#960;)
+    MStats.muaLaplas(p, n, k)                          1
+                                               P {k} &asymp; ------------&#966;(x)
+                                                       &radic;(np(1 - p))
+    MStats.fiB(x)
+    MStats.puasson(p, n, k)                             (n * p)<sup>k</sup>
+                                               P<sub>k</sub> {k} = --------e<sub>-(n * p)</sub>
+                                                        k!
+    MStats.mahtExpectation(array P, array X)          <sub>n</sub>
+                                               M(X) = &sum; x<sub>i</sub>p<sub>i</sub>
+                                                      <sup>i=1</sup>
+    MStats.dispersion(array P, array X)        D(X) = M(x<sup>2</sup>) - [M(X)]<sup>2</sup>
+  </pre>
+
+</body>
+</html>
