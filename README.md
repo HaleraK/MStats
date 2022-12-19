@@ -1,2 +1,2 @@
 # MStats
-Smal library-class of Statistics
+Small library-class of Statistics
